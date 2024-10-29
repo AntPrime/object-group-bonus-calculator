@@ -50,8 +50,32 @@ console.log('array of employee data: ',  employees );
 //
 function calculateIndividualEmployeeBonus( employee ) {  
   // your logic here
-  
-  
-  // return new object with bonus results
+  // creating an empty array to store the employee
+    let employeeBonus = []
+    // loop over all employees 
+    // check employeeRating
 
+      // ! Outer loop
+    for ( const employee of employees){
+      console.log(`current employee:, ${employees.name}`)
+
+
+      // ! Inner loop
+      for ( const money of employees.annualSalary){
+        console.log(`${employees.name} makes: ${employees.annualSalary}`)
+      }
+
+      // check review rating 
+      if ( employees.reviewRating <= 2 ){
+       console.log('employee gets no bonus')
+      }else if (employees.reviewRating === 3 ) { 
+       let newMoney = `.04 * ${employees.annualSalary}`
+       employeeBonus.push(newMoney)
+       } 
+
+       }
+     
+  }
+  // return new object with bonus results
+  return  'new object'
 }
